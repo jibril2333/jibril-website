@@ -1,4 +1,110 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-/* @config "./tailwind.config.js"; */
+/* ==========================================================================
+   Tailwind CSS 输入文件
+   ========================================================================== */
+
+/* 引入 Tailwind CSS 的三个核心层 */
+@tailwind base;       /* 基础样式：重置默认样式，提供一致的跨浏览器基础 */
+@tailwind components; /* 组件样式：可复用的UI组件样式 */
+@tailwind utilities;  /* 工具类：原子化的CSS类，如 flex、text-center 等 */
+
+/* ==========================================================================
+   基础样式层 - 全局样式和HTML元素重置
+   ========================================================================== */
+@layer base {
+  /* HTML根元素样式 */
+  html {
+    scroll-behavior: smooth; /* 平滑滚动效果，点击锚点链接时平滑滚动 */
+  }
+  
+  /* Body基础样式设置 */
+  body {
+    font-size: 16px; /* 设置基础字体大小为16px，作为rem计算的基准 */
+    /* 字体渲染优化，提升文字在不同浏览器中的显示效果 */
+    -webkit-font-smoothing: antialiased;     /* WebKit浏览器（Chrome、Safari）字体抗锯齿 */
+    -moz-osx-font-smoothing: grayscale;      /* Firefox在macOS上的字体渲染优化 */
+  }
+}
+
+/* ==========================================================================
+   组件样式层 - 可复用的UI组件
+   ========================================================================== */
+@layer components {
+  
+  /* 主要按钮组件样式 */
+  .btn-primary {
+    display: inline-flex;          /* 内联弹性盒子布局，既可以内联又可以使用flex特性 */
+    align-items: center;           /* 垂直居中对齐内部元素 */
+    padding: 0.5rem 1rem;       /* 更小的内边距 */
+    background-color: #2563eb;     /* 蓝色背景色（Tailwind的blue-600） */
+    color: white;                  /* 白色文字 */
+    border-radius: 0.5rem;         /* 圆角8px，创建现代化的圆角效果 */
+    transition: all 0.2s ease;     /* 所有属性的平滑过渡动画，持续0.2秒 */
+    text-decoration: none;         /* 移除链接下划线 */
+    font-weight: 500;              /* 中等字体粗细 */
+    font-size: 0.875rem;        /* 更小的字体 */
+  }
+  
+  /* 主要按钮的悬停状态 */
+  .btn-primary:hover {
+    background-color: #1d4ed8;     /* 悬停时背景色变为更深的蓝色（blue-700） */
+    transform: scale(1.05);        /* 悬停时轻微放大5%，增加交互反馈 */
+  }
+  
+  /* 卡片组件样式 */
+  .card {
+    background-color: white;                           /* 白色背景 */
+    border-radius: 0.5rem;                             /* 圆角8px */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);    /* 轻微阴影：向下4px模糊6px */
+    padding: 1.5rem;                                   /* 内边距24px */
+    transition: box-shadow 0.2s ease;                  /* 阴影效果的平滑过渡 */
+  }
+  
+  /* 卡片的悬停状态 */
+  .card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);  /* 悬停时增强阴影效果 */
+  }
+  
+  /* 章节标题组件样式 */
+  .section-title {
+    font-size: 1.875rem;          /* 字体大小30px（相当于text-3xl） */
+    font-weight: 700;             /* 粗体（相当于font-bold） */
+    color: #1f2937;               /* 深灰色文字（gray-800） */
+    margin-bottom: 2rem;          /* 下边距32px，与下方内容保持适当距离 */
+  }
+}
+
+/* ==========================================================================
+   工具类层 - 自定义的原子化CSS类
+   ========================================================================== */
+@layer utilities {
+  
+  /* 文本平衡换行工具类 */
+  .text-balance {
+    text-wrap: balance;            /* CSS新特性：智能换行，避免孤立单词 */
+  }
+  
+  /* 动画延迟工具类 - 200毫秒延迟 */
+  .animation-delay-200 {
+    animation-delay: 200ms;        /* 动画开始前延迟200毫秒 */
+  }
+  
+  /* 动画延迟工具类 - 400毫秒延迟 */
+  .animation-delay-400 {
+    animation-delay: 400ms;        /* 动画开始前延迟400毫秒 */
+  }
+}
+
+/* ==========================================================================
+   传统CSS样式 - 全局元素样式
+   ========================================================================== */
+
+/* 主标题样式 */
+h1 {
+  font-size: 32px;                /* 固定字体大小32px */
+}
+
+/* 页脚样式 */
+.footer {
+  font-size: 12px;                /* 小字体12px，适合页脚信息显示 */
+}
+  
