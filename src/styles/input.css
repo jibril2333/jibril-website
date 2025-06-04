@@ -19,6 +19,7 @@
     font-size: 16px; /* 设置基础字体大小为16px，作为rem计算的基准 */
     -webkit-font-smoothing: antialiased;     /* WebKit浏览器字体抗锯齿 */
     -moz-osx-font-smoothing: grayscale;      /* Firefox在macOS上的字体渲染优化 */
+    cursor: url('../src/assets/cursors/cursor.cur'), auto; /* 自定义鼠标样式 */
   }
 }
 

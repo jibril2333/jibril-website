@@ -12,7 +12,8 @@
   <meta name="description" content="Lingchen Song - Cloud Developer Portfolio" />
   <title>Lingchen Song - Portfolio</title>
   <!-- 网页标题 -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- 移除这行 -->
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
   <link href="../dist/output.css" rel="stylesheet" />
   <!-- 引入编译后的 Tailwind CSS 样式文件 -->
 </head>
@@ -26,7 +27,7 @@
     <div class="max-w-4xl mx-auto text-center">
       <!-- Hero Section -->
       <section class="mb-16">
-        <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+        <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6 mt-16">
           Hi, I'm <span class="text-blue-600">Lingchen Song</span>
         </h1>
         <p class="text-xl md:text-2xl text-gray-600 mb-8">
@@ -55,26 +56,26 @@
             <h3 class="text-xl font-semibold text-gray-900 mb-2">Master of Engineering</h3>
             <p class="text-blue-600 font-medium mb-2">Kyoto University</p>
             <p class="text-gray-600 mb-2">Graduate School of Informatics, System Science</p>
-            <p class="text-sm text-gray-500">2021 - 2023</p>
+            <p class="text-sm text-gray-500">2023 - 2025</p>
           </div>
         </div>
       </section>
 
       <!-- Hobbies Section -->
-      <section>
+      <section class="mb-16">
         <h2 class="text-3xl font-bold text-gray-800 mb-8">Hobby</h2>
         <div class="grid md:grid-cols-3 gap-6">
-          <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition duration-300">
-            <img src="./assets/icons/rainbow_six.png" alt="Game" class="w-full h-40 object-cover object-center rounded">
+          <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105">
+            <img src="./assets/icons/rainbow_six.png" alt="Game" class="w-full h-40 object-cover object-center rounded [image-rendering:auto]">
             <h3 class="text-xl font-semibold mt-4">🎮 Game</h3>
             <p class="text-gray-600 mt-2">I like to play games, especially RPG games.</p>
           </div>
-          <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition duration-300">
-            <img src="./assets/icons/travel.png" alt="Traveling" class="w-full h-40 object-cover object-[center_20%] rounded">
+          <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105">
+            <img src="./assets/icons/travel.png" alt="Traveling" class="w-full h-40 object-cover object-[center_20%] rounded [image-rendering:auto]">
             <h3 class="text-xl font-semibold mt-4">✈️ Travel</h3>
             <p class="text-gray-600 mt-2">I like to travel.</p>
           </div>
-          <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition duration-300">
+          <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105">
             <img src="./assets/icons/rei.jpg" alt="Anime" class="w-full h-40 object-cover rounded">
             <h3 class="text-xl font-semibold mt-4">🎥 Anime</h3>
             <p class="text-gray-600 mt-2">I like to watch anime, especially Evangelion.</p>
@@ -82,9 +83,11 @@
         </div>
       </section>
 
+      
+
 
       <!-- Contact Section -->
-      <section>
+      <section class="mb-16">
         <h2 class="text-3xl font-bold text-gray-800 mb-8">Connect With Me</h2>
         <div class="flex items-center justify-center gap-5 py-5">
           <a href="https://github.com/jibril2333" target="_blank" rel="noopener noreferrer" aria-label="GitHub"
