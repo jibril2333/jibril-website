@@ -1,8 +1,30 @@
 {
+  "name": "jibril-portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio website built with modern frontend technologies",
+  "main": "src/index.html",
+  "scripts": {
+    "dev": "tailwindcss -i ./src/styles/input.css -o ./dist/output.css --watch",
+    "build": "tailwindcss -i ./src/styles/input.css -o ./dist/output.css --minify",
+    "serve": "npx http-server src -p 3000 -o",
+    "preview": "npm run build && npx http-server src -p 3000 -o"
+  },
+  "keywords": [
+    "portfolio",
+    "tailwindcss",
+    "frontend",
+    "web-development"
+  ],
+  "author": "Lingchen Song",
+  "license": "MIT",
   "devDependencies": {
     "@tailwindcss/cli": "^4.1.8",
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.4",
     "tailwindcss": "^4.1.8"
+  },
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.1.8",
+    "@tailwindcss/vite": "^4.1.8"
   }
 }
