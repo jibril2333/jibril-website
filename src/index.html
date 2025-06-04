@@ -2,6 +2,7 @@
 <!-- 声明文档类型为 HTML5 -->
 <html lang="zh-CN">
 <!-- 设置网页语言为中文 -->
+
 <head>
   <!-- 头部信息开始 -->
   <meta charset="UTF-8" />
@@ -15,6 +16,7 @@
   <link href="../dist/output.css" rel="stylesheet" />
   <!-- 引入编译后的 Tailwind CSS 样式文件 -->
 </head>
+
 <body class="bg-gray-50 text-gray-900 font-sans leading-relaxed">
   <!-- 主体开始，使用 Tailwind 类：
        bg-gray-50: 设置浅灰色背景
@@ -40,14 +42,6 @@
       <section class="mb-16">
         <h2 class="text-3xl font-bold text-gray-800 mb-8">Education</h2>
         <div class="grid md:grid-cols-2 gap-8 max-w-4xl">
-          <!-- Master's Degree -->
-          <div class="bg-white rounded-lg shadow-md p-6 border-l-4 border-blue-600 hover:shadow-lg transition-shadow">
-            <h3 class="text-xl font-semibold text-gray-900 mb-2">Master of Engineering</h3>
-            <p class="text-blue-600 font-medium mb-2">Kyoto University</p>
-            <p class="text-gray-600 mb-2">Graduate School of Informatics, System Science</p>
-            <p class="text-sm text-gray-500">2021 - 2023</p>
-          </div>
-          
           <!-- Bachelor's Degree -->
           <div class="bg-white rounded-lg shadow-md p-6 border-l-4 border-green-600 hover:shadow-lg transition-shadow">
             <h3 class="text-xl font-semibold text-gray-900 mb-2">Bachelor of Engineering</h3>
@@ -55,65 +49,57 @@
             <p class="text-gray-600 mb-2">Computer Science and Technology</p>
             <p class="text-sm text-gray-500">2017 - 2021</p>
           </div>
+
+          <!-- Master's Degree -->
+          <div class="bg-white rounded-lg shadow-md p-6 border-l-4 border-blue-600 hover:shadow-lg transition-shadow">
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Master of Engineering</h3>
+            <p class="text-blue-600 font-medium mb-2">Kyoto University</p>
+            <p class="text-gray-600 mb-2">Graduate School of Informatics, System Science</p>
+            <p class="text-sm text-gray-500">2021 - 2023</p>
+          </div>
         </div>
       </section>
 
       <!-- Hobbies Section -->
       <section>
-        <h2 class="text-3xl font-bold text-gray-800 mb-8">我的兴趣爱好</h2>
+        <h2 class="text-3xl font-bold text-gray-800 mb-8">Hobby</h2>
         <div class="grid md:grid-cols-3 gap-6">
           <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition duration-300">
-            <img src="/images/photo.jpg" alt="Photography" class="w-full h-40 object-cover rounded">
-            <h3 class="text-xl font-semibold mt-4">📸 摄影</h3>
-            <p class="text-gray-600 mt-2">记录生活中的每一个灵感瞬间。</p>
+            <img src="./assets/icons/rainbow_six.png" alt="Game" class="w-full h-40 object-cover object-center rounded">
+            <h3 class="text-xl font-semibold mt-4">🎮 Game</h3>
+            <p class="text-gray-600 mt-2">I like to play games, especially RPG games.</p>
           </div>
           <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition duration-300">
-            <img src="/images/travel.jpg" alt="Traveling" class="w-full h-40 object-cover rounded">
-            <h3 class="text-xl font-semibold mt-4">✈️ 旅行</h3>
-            <p class="text-gray-600 mt-2">探索世界，感受不同文化。</p>
+            <img src="./assets/icons/travel.png" alt="Traveling" class="w-full h-40 object-cover object-[center_20%] rounded">
+            <h3 class="text-xl font-semibold mt-4">✈️ Travel</h3>
+            <p class="text-gray-600 mt-2">I like to travel.</p>
           </div>
           <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition duration-300">
-            <img src="/images/code.jpg" alt="Coding" class="w-full h-40 object-cover rounded">
-            <h3 class="text-xl font-semibold mt-4">💻 编程</h3>
-            <p class="text-gray-600 mt-2">享受把想法变成现实的过程。</p>
+            <img src="./assets/icons/rei.jpg" alt="Anime" class="w-full h-40 object-cover rounded">
+            <h3 class="text-xl font-semibold mt-4">🎥 Anime</h3>
+            <p class="text-gray-600 mt-2">I like to watch anime, especially Evangelion.</p>
           </div>
         </div>
       </section>
-      
+
 
       <!-- Contact Section -->
       <section>
         <h2 class="text-3xl font-bold text-gray-800 mb-8">Connect With Me</h2>
         <div class="flex items-center justify-center gap-5 py-5">
-          <a 
-            href="https://github.com/jibril2333" 
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="GitHub"
-            class="inline-block transition-transform duration-300 hover:scale-110"
-          >
-            <img 
-              src="assets/icons/github-mark.svg"
-              alt="GitHub Icon" 
-              class="w-6 h-6 block object-contain"
-            />
+          <a href="https://github.com/jibril2333" target="_blank" rel="noopener noreferrer" aria-label="GitHub"
+            class="inline-block transition-transform duration-300 hover:scale-110">
+            <img src="assets/icons/github-mark.svg" alt="GitHub Icon" class="w-6 h-6 block object-contain" />
           </a>
-          <a 
-            href="https://instagram.com/jibril2333" 
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Instagram"
-            class="inline-block transition-transform duration-300 hover:scale-110"
-          >
-            <img 
-              src="assets/icons/Instagram_Glyph_Gradient.svg" 
-              alt="Instagram Icon" 
-              class="w-6 h-6 block object-contain"
-            />
+          <a href="https://instagram.com/jibril2333" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+            class="inline-block transition-transform duration-300 hover:scale-110">
+            <img src="assets/icons/Instagram_Glyph_Gradient.svg" alt="Instagram Icon"
+              class="w-6 h-6 block object-contain" />
           </a>
         </div>
       </section>
     </div>
   </header>
 </body>
+
 </html>
