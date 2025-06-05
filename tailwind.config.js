@@ -5,7 +5,11 @@ export default {
     "./src/**/*.css"
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        garamond: ['"Garamond"', '"monotype-garamond"', 'serif'],
+      },
+    },
   },
   plugins: [],
   corePlugins: {

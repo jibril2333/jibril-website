@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lingchen Song</title>
   <link href="../dist/output.css" rel="stylesheet" />
 </head>
+
 <body class="bg-gray-100 text-gray-900">
   <header class="p-4 bg-blue-600 text-white">
     <div class="grid grid-cols-3 gap-4 items-center">
@@ -23,7 +25,85 @@
     </div>
   </header>
   <main class="p-8">
-    <p class="text-lg">Evangelion</p>
+    <p class="text-lg text-center font-bold">My Favourite Anime</p>
   </main>
+
+  <!-- 轮播 -->
+  <div class="relative w-full max-w-4xl mx-auto overflow-hidden">
+    <div id="carousel-track" class="flex transition-transform duration-500">
+      <!-- 每张卡片 -->
+      <div class="w-64 mx-2 rounded text-center flex-none">
+        <img src="./assets/anime/fate.webp" class="w-xl h-xl object-cover rounded shadow" />
+        <div class="text-2xl font-bold">Fate Series</div>
+      </div>
+      <div class="w-64 mx-2 rounded text-center flex-none">
+        <img src="./assets/anime/eva.webp" class="w-xl h-xl object-cover rounded shadow" />
+        <div class="text-2xl font-bold">Evangelion Series</div>
+      </div>
+      <div class="w-64 mx-2 rounded text-center flex-none">
+        <img src="./assets/anime/ngnl.webp" class="w-xl h-xl object-cover rounded shadow" />
+        <div class="text-2xl font-bold">No game no life</div>
+      </div>
+      <div class="w-64 mx-2 rounded text-center flex-none">
+        <img src="./assets/anime/steinsgate.webp" class="w-xl h-xl object-cover rounded shadow" />
+        <div class="text-2xl font-bold font-garamond">Steins;Gate</div>
+      </div>
+      <!-- 可以有更多卡片 -->
+    </div>
+    <!-- 左右按钮 -->
+    <button id="prev"
+      class="absolute left-0 top-1/2 -translate-y-1/2 bg-white w-10 h-10 flex items-center justify-center rounded-full shadow">
+      <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+
+    <button id="next"
+      class="absolute right-0 top-1/2 -translate-y-1/2 bg-white w-10 h-10 flex items-center justify-center rounded-full shadow">
+      <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+  </div>
+
+  <script>
+    const track = document.getElementById('carousel-track'); // 获取轮播轨道
+    const cards = document.querySelectorAll('#carousel-track > div'); // 获取所有卡片
+    const container = track.parentElement; // 获取容器
+    const cardStyle = getComputedStyle(cards[0]); // 获取卡片样式
+    const gap = parseFloat(cardStyle.marginLeft) + parseFloat(cardStyle.marginRight); // 获取卡片间距
+    const cardWidth = cards[0].offsetWidth; // 获取卡片宽度
+    const containerWidth = container.offsetWidth; // 获取容器宽度
+
+    // 判断能否完整显示三张卡片
+    let currentIndex = 0;
+    if (containerWidth >= 3 * (cardWidth + gap) - gap) { // 如果容器宽度大于等于三张卡片宽度+间距
+      currentIndex = 1; // 显示第二张卡片
+    }
+
+    function updateCarousel() {
+      const container = track.parentElement; // 获取容器
+      const containerWidth = container.offsetWidth; // 获取容器宽度
+      const cardWidth = cards[0].offsetWidth; // 获取卡片宽度
+      const cardStyle = getComputedStyle(cards[0]); // 获取卡片样式
+      const gap = parseFloat(cardStyle.marginLeft) + parseFloat(cardStyle.marginRight); // 获取卡片间距
+
+      // 让当前卡片居中
+      const offset = (containerWidth / 2) - (cardWidth / 2) - (cardWidth + gap) * currentIndex; // 计算偏移量
+      track.style.transform = `translateX(${offset}px)`; // 设置轨道位置
+    }
+
+    document.getElementById('prev').onclick = () => {
+      currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+      updateCarousel();
+    };
+    document.getElementById('next').onclick = () => {
+      currentIndex = (currentIndex + 1) % cards.length;
+      updateCarousel();
+    };
+
+    updateCarousel();
+  </script>
 </body>
+
 </html>
