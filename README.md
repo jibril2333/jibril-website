@@ -9,6 +9,7 @@
 - ⚡ **高性能** - 使用 Tailwind CSS 优化样式
 - 🔧 **易于维护** - 模块化的项目结构
 - 🌐 **SEO 友好** - 语义化 HTML 和优化的元标签
+- 🎬 **动漫卡片轮播** - 支持无限循环、圆形按钮、SVG箭头、自适应居中、Garamond 字体美化
 
 ## 🛠️ 技术栈
 
@@ -106,6 +107,7 @@ npm run preview
 - `.btn-primary` - 主要按钮样式
 - `.card` - 卡片组件样式
 - `.section-title` - 章节标题样式
+- **Favourite Anime Carousel** - 动漫卡片轮播组件，支持无限循环与美观交互
 
 ## 📱 浏览器支持
 
